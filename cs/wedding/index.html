@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Title Wedding</title>
+<link type="text/css" rel="stylesheet" href="css.css" />
+<script>
+    document.createElement('article'); document.createElement('aside'); document.createElement('details'); document.createElement('figcaption'); document.createElement('figure'); document.createElement('footer'); document.createElement('header'); document.createElement('hgroup'); document.createElement('main'); document.createElement('nav'); document.createElement('section'); document.createElement('summary');
+</script>
+
+<!--Carousel Thumb-->
+    <link rel="stylesheet" href="js/carousel/styles.css" type="text/css"/>
+    <script src="js/carousel/jquery-1.12.4.js"></script>
+    <script src="js/carousel/floatingcarousel.js" type="text/javascript"></script>
+<!--Carousel Thumb-->
+<!--Popup-->
+<!--Popup-->
+<link rel="stylesheet" href="js/magnific-popup/magnific-popup.css">
+<!--<script src="js/magnific-popup/jquery-1.9.1.js"></script>-->
+<script src="js/magnific-popup/jquery.magnific-popup.js"></script>
+<script>
+$(document).ready(function() {
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 320,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
+});
+
+$(document).ready(function() {
+	$('.popup-with-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#name',
+
+		// When elemened is focused, some mobile browsers in some cases zoom in
+		// It looks not nice, so we disable it:
+		callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
+});
+$(document).ready(function() {
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
+});
+$(document).ready(function() {
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		}
+	});
+});
+</script>
+<!--Popup-->
+
+<!--Popup-->
+<!--FlexSlider pieces-->
+    <link rel="stylesheet" href="js/FlexSlider-1.7/flexslider.css" type="text/css" media="screen" />
+    <!--<script src="js/FlexSlider-1.7/jquery.min.js"></script>-->
+    <script src="js/FlexSlider-1.7/jquery.flexslider.js"></script>
+    <script src="js/FlexSlider-1.7/flexslider.js"></script>
+<!--End FlexSlider pieces-->
+</head>
+
+<body>
+<section class="nemuFix">
+	<section class="container">
+    	<ul>
+        	<li>
+            	<a href="#gallery">
+                	Gallery
+                </a>
+            </li>
+            <li>
+            	<a href="#countdown">
+                	Countdown
+                </a>
+            </li>
+            <li>
+            	<a href="#location">
+                	Location
+                </a>
+            </li>
+        </ul>
+    </section>
+</section>
+<header class="headerMain" id="top">
+	<section class="container">
+    	<img alt="" title="" src="images/logo.png" />
+    </section>
+</header>
+<section class="pageSlide">
+	<section class="container">
+    <div class="flexslider">
+        <ul class="slides">  
+            <li>
+                <a href="#" target="_blank">
+                    <img alt="" title="" src="images/spaceSlide.png" style="background-image:url(images/slide01.jpg);">
+                    
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img alt="" title="" src="images/spaceSlide.png" style="background-image:url(images/slide02.jpg);">
+                    
+                </a>
+            </li>
+        </ul>
+    </div>          
+    
+    </section>
+</section>
+<section class="PageButton">
+	<section class="container buttonChoice">
+		<ul>
+        	<li>
+            	<nav>
+                	<a href="#">
+                    	JOIN
+                    </a>
+                </nav>
+            </li>
+            <li>
+            	<nav>
+                	<a href="#">
+                    	REFURE
+                    </a>
+                </nav>
+            </li>
+        </ul>
+    </section>
+</section>
+<section class="pageForm">
+	<section class="container">
+    	<section class="titleParagraph">
+        	<h3>
+            	JOIN US
+            </h3>
+        </section>
+        <section class="contentForm">
+        	<section class="formSec">
+            	<div class="boxForm">
+                    <label>
+                        Title Label
+                    </label>
+                    <section class="textfield">
+                        <input name="" type="text" />
+                    </section>
+                </div>
+            </section>
+            
+            <section class="formSec">
+            	<div class="boxForm">
+                    <label>
+                        Title Label
+                    </label>
+                    <section class="textfield">
+                        <input name="" type="text" />
+                    </section>
+                </div>
+            </section>
+            
+            <section class="formSec">
+            	<div class="boxFormSelect">
+                    <label>
+                        Title Label
+                    </label>
+                    <section class="selectbox">
+                        <select name="">
+                        	<option>
+                            	-- Please Select
+                            </option>
+                        </select>
+                    </section>
+                </div>
+            </section>
+            <section class="formSec">
+            	<div class="boxFormSelect">
+                    <label>
+                        Title Label
+                    </label>
+                    <section class="selectbox">
+                        <select name="">
+                        	<option>
+                            	-- Please Select
+                            </option>
+                        </select>
+                    </section>
+                </div>
+            </section>
+            
+            <section class="formFull">
+            	<div class="boxFormTextarea">
+                    <label>
+                        Title Label
+                    </label>
+                    <section class="textareabox">
+                        <textarea name="" cols="" rows=""></textarea>
+                    </section>
+                </div>
+            </section>
+
+            <div class="clear"></div>
+            <nav class="buttonForm">
+            	<input name="" type="button" value="SEND" />
+            </nav>
+        </section>
+
+    </section>
+</section>
+<section class="location" id="location">
+	<section class="container">
+    	<section class="listContent">
+            <section class="mapList">
+            	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.893418370902!2d100.52507041483015!3d13.72490209036491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298d26201bc53%3A0xeea5959802ad298e!2z4LiL4Lit4LiiIOC4quC4teC4peC4oSA5IOC5geC4guC4p-C4hyDguKrguLXguKXguKEg4LmA4LiC4LiVIOC4muC4suC4h-C4o-C4seC4gSDguIHguKPguLjguIfguYDguJfguJ7guKHguKvguLLguJnguITguKMgMTA1MDA!5e0!3m2!1sth!2sth!4v1518891005489" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>        
+        	<ul>
+            	<li>
+                	<a href="#" class="active">
+                    	<div>
+                        	<span>
+                            	A
+                            </span>
+                        </div>
+                        <article>
+                        	<h4>KCC BUILDING</h4>
+                            <p>
+                            At Soi Sueksa Witthaya, Khwaeng Silom, Khet Bang Rak,
+                            Krung Thep Maha Nakhon 10500, Bangkok,
+                            </p>
+                            <span>084-543-4833</span>
+							<nav>E-mail : plus.estate@yahoo.co.th</nav>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<div>
+                        	<span>
+                            	B
+                            </span>
+                        </div>
+                        <article>
+                        	<h4>KCC BUILDING</h4>
+                            <p>
+                            At Soi Sueksa Witthaya, Khwaeng Silom, Khet Bang Rak,
+                            Krung Thep Maha Nakhon 10500, Bangkok,
+                            </p>
+                            <span>084-543-4833</span>
+							<nav>E-mail : plus.estate@yahoo.co.th</nav>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<div>
+                        	<span>
+                            	C
+                            </span>
+                        </div>
+                        <article>
+                        	<h4>KCC BUILDING</h4>
+                            <p>
+                            At Soi Sueksa Witthaya, Khwaeng Silom, Khet Bang Rak,
+                            Krung Thep Maha Nakhon 10500, Bangkok,
+                            </p>
+                            <span>084-543-4833</span>
+							<nav>E-mail : plus.estate@yahoo.co.th</nav>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+</section>
+<section class="gallery" id="gallery">
+	<section class="container">
+    	<section class="titleParagraph">
+        	<h3>
+            	GALLERY
+            </h3>
+        </section>
+        
+        <div class="carousel" id="carousel-responsive">
+            <ul class="popup-gallery">
+                <li>
+                    <a href="https://previews.123rf.com/images/epicstockmedia/epicstockmedia1312/epicstockmedia131200158/24490427-bride-and-groom-enjoying-amazing-sunset-on-a-beautiful-tropical-beach-romantic-married-couple.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/epicstockmedia/epicstockmedia1312/epicstockmedia131200158/24490427-bride-and-groom-enjoying-amazing-sunset-on-a-beautiful-tropical-beach-romantic-married-couple.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/pigprox/pigprox1501/pigprox150100699/35606105-close-up-groom-put-the-wedding-ring-on-bride.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/pigprox/pigprox1501/pigprox150100699/35606105-close-up-groom-put-the-wedding-ring-on-bride.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/halfpoint/halfpoint1501/halfpoint150100417/35800980-full-length-portrait-of-newlywed-couple-and-their-friends-at-the-wedding-party-showered-with-confett.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/halfpoint/halfpoint1501/halfpoint150100417/35800980-full-length-portrait-of-newlywed-couple-and-their-friends-at-the-wedding-party-showered-with-confett.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/halfpoint/halfpoint1501/halfpoint150100085/35429790-full-length-portrait-of-newlywed-couple-dancing-and-having-fun-with-bridesmaids-and-groomsmen-in-gre.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/halfpoint/halfpoint1501/halfpoint150100085/35429790-full-length-portrait-of-newlywed-couple-dancing-and-having-fun-with-bridesmaids-and-groomsmen-in-gre.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/halfpoint/halfpoint1411/halfpoint141100472/33703238-portrait-of-newlywed-couple-having-fun-with-bridesmaids-and-groomsmen-in-green-sunny-park.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/halfpoint/halfpoint1411/halfpoint141100472/33703238-portrait-of-newlywed-couple-having-fun-with-bridesmaids-and-groomsmen-in-green-sunny-park.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/halfpoint/halfpoint1411/halfpoint141100458/33703098-full-length-portrait-of-newlywed-couple-having-fun-with-bridesmaids-and-groomsmen-in-green-sunny-par.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/halfpoint/halfpoint1411/halfpoint141100458/33703098-full-length-portrait-of-newlywed-couple-having-fun-with-bridesmaids-and-groomsmen-in-green-sunny-par.jpg?ver=6);" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://previews.123rf.com/images/halfpoint/halfpoint1410/halfpoint141000369/32527572-outdoor-portrait-of-young-groom-with-his-friends-holding-beautiful-bride.jpg">
+    					<img alt="" title="" src="images/spaceSquare.png" style="background-image:url(https://us.123rf.com/450wm/halfpoint/halfpoint1410/halfpoint141000369/32527572-outdoor-portrait-of-young-groom-with-his-friends-holding-beautiful-bride.jpg?ver=6);" />
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+  </section>      
+</section>
+<section class="textContent">
+	<section class="container">
+    	<article class="boxText">
+        	MAY THE GOOD TIME AND <br />
+            TREASURES OF THE PRESENT<br />
+            BECOME GOLDEN MEMORIES OF<br />
+            TOMORROW. WISH YOU LOTS OF<br />
+            LOVE, JOY AND HAPPINESS.
+        </article>
+    </section>
+</section>
+<section class="Date">
+	<section class="container">
+    	<section class="moduleTime">
+        	<div class="time">
+            	7 <span>PM</span>
+            </div>
+            <div class="day">
+            	<span>
+                	MAR
+                </span>
+                <div>
+                	24
+                </div>
+            </div>
+            <div class="years">
+            	2018
+            </div>
+        </section>
+    </section>
+</section>
+<section class="Coundown" id="countdown">
+	<section class="container">
+    	<section class="boxCountdow">
+        	<ul>
+            	<li>
+                	<section class="contentCountdown">
+                    	<h4>
+                        	Day
+                        </h4>
+                        <section>
+                        	00
+                        </section>
+                    </section>
+                </li>
+                <li>
+                	<section class="contentCountdown">
+                    	<h4>
+                        	Hour
+                        </h4>
+                        <section>
+                        	00
+                        </section>
+                    </section>
+                </li>
+                <li>
+                	<section class="contentCountdown">
+                    	<h4>
+                        	Minute
+                        </h4>
+                        <section>
+                        	00
+                        </section>
+                    </section>
+                </li>
+                <li>
+                	<section class="contentCountdown">
+                    	<h4>
+                        	Second
+                        </h4>
+                        <section>
+                        	00
+                        </section>
+                    </section>
+                </li>
+            </ul>
+        </section>
+    </section>
+</section>
+<section class="iconSocial">
+	<section class="container">
+    	<ul>
+        	<li>
+            	<a href="#">
+                	<figure>
+                    	<img alt="" title="" src="images/iconLine.png" />
+                    </figure>
+                    <span>
+                    	Line
+                    </span>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<figure>
+                    	<img alt="" title="" src="images/facebook.png" />
+                    </figure>
+                    <span>
+                    	Facebook
+                    </span>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<figure>
+                    	<img alt="" title="" src="images/twitter.png" />
+                    </figure>
+                    <span>
+                    	Twitter
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</section>
+<footer>
+	<section class="footerMain">
+    	Copyright ©  2018 RSVP IDEA.com All Right Reserved
+    </section>
+</footer>
+<nav class="gotoTop">
+	<a href="#top">
+    	<img alt="" title="" src="images/arrowTop.png" />
+    </a>
+</nav>
+
+</body>
+<!--Carousel Thumb-->
+    <script type="text/javascript">
+
+        // Default carousel
+        $('#carousel-default').floatingCarousel();
+
+        // Autoscroll
+
+        // vertical
+        $('#carousel-vertical').floatingCarousel({
+            scrollerAlignment : 'vertical'
+        });
+
+        //responsive
+        var opts = {
+                autoScroll : true,
+                autoScrollSpeed : 20000
+            },
+            responsiveCarousel = $('#carousel-responsive').floatingCarousel(opts);
+        $(window).resize($.debounce(100, function () {
+            responsiveCarousel.update(opts);
+        }));
+    </script>
+<!--Carousel Thumb-->
+<script>
+$("a[href^='#']").click(function(e) {
+	e.preventDefault();
+	
+	var position = $($(this).attr("href")).offset().top;
+
+	$("body, html").animate({
+		scrollTop: position
+	} /* speed */ );
+});
+</script>
+
+</head>
+
+</html>

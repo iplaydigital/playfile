@@ -1,0 +1,948 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'db_helvethaica_x55_regular';
+    src: url('../fonts/db_helvethaica_x/db_helvethaica_x_v3.2_0-webfont.woff2') format('woff2'),
+         url('../fonts/db_helvethaica_x/db_helvethaica_x_v3.2_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	background-color:#333333;
+	margin:0px; padding:0px;
+	font-family:Arial , Tahoma; font-size:14px; color:#666;
+}
+*:focus {
+	outline:none !important;
+}
+img {
+	border:0px;
+	max-width: 100%;
+	height: auto;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p {
+	margin:0px; padding:0px;
+}
+ul {
+	margin:0px; padding:0px;
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+a:hover {
+	text-decoration:none;
+	color:#642f96;
+}
+a:focus {
+	color:#642f96;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+figure {
+	margin:0px; padding:0px;
+}
+ textarea , select {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;	
+}
+@-moz-document url-prefix() {
+    select, select:-moz-focusring, select::-moz-focus-inner {
+       color: transparent !important;
+       text-shadow: 0 0 0 #000 !important;
+       background-image: none !important;
+       border:0;
+    }
+}
+
+/***************************************************************************************************Css Default*/
+
+.mainHeader {
+	background:#fff; padding:20px 0; position:fixed; left:0px; top:0px; width:100%; z-index:99;
+}
+
+.container {
+	width:1160px; margin:0px auto;
+}
+.paragraph {
+	overflow:hidden;
+}
+.overflowNone {
+	overflow:inherit;
+}
+.clear {
+	clear:both; float:none; line-height:0px; font-size:0px;
+}
+
+.logoMain {
+	float:left;
+}
+.iconSocial {
+	float:right; margin-top:10px;
+}
+	.iconSocial nav {
+		float:left; margin:0 10px;
+	}
+.menuMain {
+	float:right;
+}
+	.menuMain ul {
+		text-align:right; margin-top:20px;
+	}
+		.menuMain ul li {
+			display:inline-block; position:relative;
+		}
+			.menuMain ul li a {
+				display:block; margin:0 10px; text-transform:uppercase;
+			}
+			.menuMain ul li a.active {
+				text-decoration:underline; color:#642f96;
+			}
+			
+			.menuMain ul li ul {
+				position:absolute; 
+				background-color:rgba(93,103,103,0.8);
+				text-align:left; 
+				display:none;
+			}
+			
+			.menuMain ul li ul span {
+			  width: 0; 
+			  height: 0; 
+			  border-left: 20px solid transparent;
+			  border-right: 20px solid transparent;
+			  
+			  border-bottom: 15px solid rgba(93,103,103,0.8);
+			  position:absolute; left:20px; top:-15px;
+			}			
+			
+				.menuMain ul li ul li {
+					width:100%;
+					border-bottom:1px solid #fff;
+					
+				}
+					.menuMain ul li ul li a {
+						display:block; color:#fff;
+						padding:10px 20px;
+						white-space:nowrap;
+					}
+					.menuMain ul li ul li a:hover {
+						text-decoration:underline;
+					}
+.paragraphHome {
+	background:#fff; padding-top:100px;
+}
+	.paragraphHome header {
+		text-align:center;
+	}
+		.paragraphHome header .top { 
+			color:#000; font-weight:bold;
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:36px; text-transform:uppercase;
+			padding-bottom:0px;
+		}
+		.paragraphHome header .bottom { 
+			color:#666; 
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:24px; text-transform:uppercase;
+		}
+		
+.pagePortFolioHome {
+	padding-top:40px;
+	
+}
+.pagePortFolioHome ul {
+	overflow:hidden;
+}
+.pagePortFolioHome ul li {
+	width:33.333334%; float:left;
+}
+.pagePortFolioHome ul li a {
+	display:block; margin:0 20px 20px 20px;
+}
+.pagePortFolioHome ul li a .boxPort {
+	position:relative;
+}
+.pagePortFolioHome ul li a .boxPort figure {
+	position:relative; left:0px; top:0px;
+	background-position:center 50%;
+	background-size:cover;
+}
+.pagePortFolioHome ul li a .boxPort article {
+	position:absolute; left:0px; top:0px; bottom:0px; right:0px;
+	opacity:0; filter:alpha("opacity=0%");
+	transition:0.3s ease-in-out;
+	background-color:rgba(0,0,0,0.7);
+}
+.pagePortFolioHome ul li a:hover .boxPort article {
+	transition:0.6s ease-in-out;
+	opacity:1; filter:alpha("opacity=100%");
+}
+	.pagePortFolioHome ul li a .boxPort article .name {
+		margin-top:40%;
+		font-family: 'db_helvethaica_x55_regular'; color:#fff; text-align:center; font-size:35px; text-transform:uppercase;
+	}
+	.pagePortFolioHome ul li a .boxPort article .discription {
+		font-family: 'db_helvethaica_x55_regular'; color:#fff; text-align:center; font-size:18px; text-transform:uppercase;		
+	}
+	.pagePortFolioHome ul li a .boxPort article nav {
+		font-family: 'db_helvethaica_x55_regular'; color:#fff; text-align:center; font-size:16px; text-transform:uppercase;
+		padding-top:20px;
+	}
+.Menumobile {
+	display:none;
+}
+/*====================================================================================================================*/
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+/* Styles */
+.container {
+	width:auto; margin:0px 20px;
+}
+}		
+	
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+/* Styles */
+.container {
+	width:auto; margin:0px 20px;
+}
+.logoMain {
+	float:left; max-width:50%;
+}
+.mainHeader {
+	padding:20px 0; position:relative; 
+}
+.iconSocial {
+	float:right; margin-top:0px;
+}
+	.iconSocial nav {
+		float:left; margin:0 3px;
+	}
+		.iconSocial nav img {
+			width:20px;
+		}
+.menuMain {
+	display:none;
+}
+.Menumobile {
+	display:block;
+}
+.paragraphHome {
+	padding-top:0px;
+}
+		.paragraphHome header .top { 
+			font-size:30px;
+		}
+		.paragraphHome header .bottom { 
+			font-size:24px;
+		}
+.pagePortFolioHome ul li {
+	
+}
+.pagePortFolioHome ul li a {
+	margin:0 5px 10px 5px;
+}
+.pagePortFolioHome ul li a .boxPort figure img {
+}
+	.pagePortFolioHome ul li a .boxPort article .name {
+		font-size:20px;
+	}
+	.pagePortFolioHome ul li a .boxPort article .discription {
+		font-size:16px; 	
+	}
+	.pagePortFolioHome ul li a .boxPort article nav {
+		font-size:14px;
+	}	
+.pagePortFolioHome {
+	padding-top:10px;
+	
+}
+}		
+	
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {/* Styles */
+.container {
+	width:auto; margin:0px 10px;
+}
+.logoMain {
+	float:left; max-width:50%;
+}
+.mainHeader {
+	padding:20px 0; position:relative; 
+}
+.iconSocial {
+	float:right; margin-top:0px;
+}
+	.iconSocial nav {
+		float:left; margin:0 3px;
+	}
+		.iconSocial nav img {
+			width:20px;
+		}
+.menuMain {
+	display:none;
+}
+.Menumobile {
+	display:block;
+}
+.paragraphHome {
+	padding-top:0px;
+}
+		.paragraphHome header .top { 
+			font-size:20px;
+		}
+		.paragraphHome header .bottom { 
+			font-size:16px;
+		}
+.pagePortFolioHome ul li {
+	
+}
+.pagePortFolioHome ul li a {
+	margin:0 5px 10px 5px;
+}
+.pagePortFolioHome ul li a .boxPort figure img {
+}
+	.pagePortFolioHome ul li a .boxPort article .name {
+		margin-top:20%;
+		font-size:20px;
+	}
+	.pagePortFolioHome ul li a .boxPort article .discription {
+		font-size:16px; 	
+	}
+	.pagePortFolioHome ul li a .boxPort article nav {
+		font-size:14px;
+	}	
+.pagePortFolioHome {
+	padding-top:0px;
+	
+}
+}		
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.container {
+	width:auto; margin:0px 10px;
+}
+.logoMain {
+	float:left; max-width:50%;
+}
+.mainHeader {
+	padding:20px 0; position:relative; 
+}
+.iconSocial {
+	float:right; margin-top:0px;
+}
+	.iconSocial nav {
+		float:left; margin:0 3px;
+	}
+		.iconSocial nav img {
+			width:20px;
+		}
+.menuMain {
+	display:none;
+}
+.Menumobile {
+	display:block;
+}
+.paragraphHome {
+	padding-top:0px;
+}
+		.paragraphHome header .top { 
+			font-size:20px;
+		}
+		.paragraphHome header .bottom { 
+			font-size:16px;
+		}
+.pagePortFolioHome ul li {
+	width:100%; float:left;
+}
+.pagePortFolioHome ul li a {
+	margin:0 0px 10px 0px;
+}
+.pagePortFolioHome ul li a .boxPort figure img {
+	height:200px;
+}
+	.pagePortFolioHome ul li a .boxPort article .name {
+		margin-top:10%;
+	}
+.pagePortFolioHome {
+	padding-top:0px;
+	
+}
+}	
+
+.pageAbout {
+	padding:80px 0;
+	background-image:url(../images/bgabout.png);
+	background-position:center top;
+}
+	.pageAbout header {
+		text-align:center;
+	}
+		.pageAbout header .top { 
+			color:#000; font-weight:bold;
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:36px; text-transform:uppercase;
+			padding-bottom:0px;
+		}
+		.pageAbout header .bottom { 
+			color:#666; 
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:24px; text-transform:uppercase;
+		}
+.pageAbout .pageContent {
+	font-size:14px; line-height:1.6em; padding-top:40px;
+	width:800px; margin:0 auto; text-align:center;
+}
+.pageAbout2 {
+	padding-top:80px;
+}
+	.pageAbout2 header {
+		text-align:center;
+	}
+		.pageAbout2 header .top { 
+			color:#000; font-weight:bold;
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:36px; text-transform:uppercase;
+			padding-bottom:0px;
+		}
+.contentAbout2 {
+	padding-top:40px;
+}
+.contentAbout2 ul {
+	overflow:hidden; letter-spacing:-4px;	
+}
+.contentAbout2 ul li {
+	width:25%; display:inline-block; letter-spacing:0px; vertical-align:top;
+}
+	.contentAbout2 ul li section {
+		padding:0 20px;
+	}
+		.contentAbout2 ul li section figure {
+			margin-bottom:10px; text-align:center;
+		}
+		.contentAbout2 ul li section article {
+			font-family: 'db_helvethaica_x55_regular'; text-align:center;
+			font-size:24px;
+		}
+.boxMenuBurger {
+	position:relative; height:45px; z-index:999;
+	background:#000;
+}
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+/* Styles */
+.pageAbout {
+	padding:20px 0;
+}
+.pageAbout {
+	padding-top:0px;
+}
+		.pageAbout header .top { 
+			font-size:20px;
+		}
+		.pageAbout header .bottom { 
+			font-size:16px;
+		}
+.pageAbout .pageContent {
+	padding-top:0px;
+	width:auto;
+	font-size:12px;
+}
+
+.contentAbout2 {
+	padding-top:10px;
+}
+.contentAbout2 ul li {
+	width:25%; padding-bottom:20px;
+}
+	.contentAbout2 ul li section {
+		padding:0 10px;
+	}
+		.contentAbout2 ul li section figure {
+			margin-bottom:5px;
+		}
+.pageAbout2 {
+	padding-top:30px;
+}	
+		.contentAbout2 ul li section article {
+			font-size:18px;
+		}
+	
+}	
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+/* Styles */
+.pageAbout {
+	padding:20px 0;
+}
+.pageAbout {
+	padding-top:0px;
+}
+		.pageAbout header .top { 
+			font-size:20px;
+		}
+		.pageAbout header .bottom { 
+			font-size:16px;
+		}
+.pageAbout .pageContent {
+	padding-top:0px;
+	width:auto;
+	font-size:12px;
+}
+
+.contentAbout2 {
+	padding-top:10px;
+}
+.contentAbout2 ul li {
+	width:50%; padding-bottom:20px;
+}
+	.contentAbout2 ul li section {
+		padding:0 10px;
+	}
+		.contentAbout2 ul li section figure {
+			margin-bottom:5px;
+		}
+.pageAbout2 {
+	padding-top:30px;
+}	
+		.contentAbout2 ul li section article {
+			font-size:18px;
+		}
+	
+}	
+/*====================================================================================================================*/
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.pageAbout {
+	padding:20px 0;
+}
+.pageAbout {
+	padding-top:0px;
+}
+		.pageAbout header .top { 
+			font-size:20px;
+		}
+		.pageAbout header .bottom { 
+			font-size:16px;
+		}
+.pageAbout .pageContent {
+	padding-top:0px;
+	width:auto;
+	font-size:12px;
+}
+
+.contentAbout2 {
+	padding-top:10px;
+}
+.contentAbout2 ul li {
+	width:50%; padding-bottom:20px;
+}
+	.contentAbout2 ul li section {
+		padding:0 10px;
+	}
+		.contentAbout2 ul li section figure {
+			margin-bottom:5px;
+		}
+.pageAbout2 {
+	padding-top:30px;
+}	
+		.contentAbout2 ul li section article {
+			font-size:18px;
+		}
+	
+}
+
+.pageService {
+	padding:80px 0; background:#f4f4f4;
+}
+
+	.pageService header {
+		text-align:center;
+	}
+		.pageService header .top { 
+			color:#000; font-weight:bold;
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:36px; text-transform:uppercase;
+			padding-bottom:0px;
+		}
+		.pageService header .bottom { 
+			color:#666; 
+			font-family: 'db_helvethaica_x55_regular';
+			font-size:24px; text-transform:uppercase;
+		}
+.blogService {
+}
+.blogService ul {
+	letter-spacing:-4px; text-align:center;
+}
+.blogService ul li {
+	letter-spacing:0px; display:inline-block; width:16.666667%; vertical-align:top; margin-bottom:20px;
+}
+.blogService ul li figure {
+	margin-bottom:10px; text-align:center;
+}
+.blogService ul li article {
+	font-family: 'db_helvethaica_x55_regular'; font-size:18px; text-align:center;
+}
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+/* Styles */
+.pageService {
+	padding:20px 0;
+}
+.pageService {
+	padding-top:0px;
+}
+		.pageService header .top { 
+			font-size:20px;
+		}
+		.pageService header .bottom { 
+			font-size:16px;
+		}
+
+}		
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+/* Styles */
+.pageService {
+	padding:20px 0;
+}
+.pageService {
+	padding-top:0px;
+}
+		.pageService header .top { 
+			font-size:20px;
+		}
+		.pageService header .bottom { 
+			font-size:16px;
+		}
+.blogService ul li {
+	width:33.333334%;
+}		
+}		
+/*====================================================================================================================*/
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.pageService {
+	padding:20px 0;
+}
+.pageService {
+	padding-top:0px;
+}
+		.pageService header .top { 
+			font-size:20px;
+		}
+		.pageService header .bottom { 
+			font-size:16px;
+		}
+.blogService ul li {
+	width:33.333334%;
+}		
+}	
+
+
+
+.pageContact {
+	padding:80px 0;
+	background:#333;
+}
+.contact-left {
+	width:50%; float:left;
+}
+.logoFooter {
+	margin-bottom:20px; max-width:200px;
+}
+.menuFooter {
+	margin-bottom:20px;
+}
+.menuFooter ul {
+	
+}
+.menuFooter ul li {
+	display:inline-block;
+}
+.menuFooter ul li a {
+	margin-right:10px;
+	font-family: 'db_helvethaica_x55_regular'; font-size:18px; color:#fff;
+}
+.menuFooter ul li a:hover {
+	color:#a472ca;
+}
+.contentContact {
+	line-height:1.4em;
+	font-family: 'db_helvethaica_x55_regular'; font-size:18px; color:#fff;
+}
+.contact-right {
+	float:right; width:50%; text-align:center;
+}
+.contact-right img {
+	width:400px;
+}
+.iconSocialFooter {
+	overflow:hidden; padding-top:10px;
+}
+.iconSocialFooter a {
+	display:block; float:left; margin-right:10px;
+}
+.boxCopyright {
+	font-size:12px; letter-spacing:2px; color:#fff; padding-top:10px;
+}
+.paragraphClient {
+	padding-top:150px;
+}
+
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+.pageContact {
+	padding:20px 0;
+	
+}
+.paragraphClient {
+	padding-top:0px;
+}
+}
+
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+/* Styles */
+.pageContact {
+	padding:20px 0;
+}
+.contact-left {
+	width:auto; float:none;
+}
+.contact-right {
+	width:auto; float:none; padding-top:20px;
+}
+.logoFooter {
+	margin-bottom:10px; 
+}
+.paragraphClient {
+	padding-top:0px;
+}
+}
+
+
+/*====================================================================================================================*/
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.pageContact {
+	padding:20px 0;
+}
+.contact-left {
+	width:auto; float:none;
+}
+.logoFooter {
+	margin-bottom:10px; 
+}
+.contact-right {
+	width:auto; float:none; padding-top:20px;
+}
+.menuFooter ul li a {
+	margin-right:5px;
+}
+.paragraphClient {
+	padding-top:0px;
+}
+}
+.pageClients {
+}
+.pageClients ul {
+	letter-spacing:-4px;
+	text-align:center;
+}
+.pageClients ul li {
+	letter-spacing:0px; display:inline-block; width:12.5%;
+	border-bottom:#ddd 1px solid;
+	
+}
+.pageClients ul li section {
+	padding:20px 10px;
+}
+
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+/* Styles */
+.pageClients ul li {
+	width:20%;
+	
+}
+}
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+/* Styles */
+.pageClients ul li {
+	width:25%;
+	
+}
+}
+/*====================================================================================================================*/
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.pageClients ul li {
+	width:33.333334%;
+	
+}
+}
+
+.navigator {
+	padding-bottom:20px; text-align:right;
+}
+	.navigator a {
+		font-style:italic; font-size:14px; font-weight:bold;
+	}
+	
+.pageDetail {
+	background:#f4f4f4;
+	overflow:hidden; 
+}
+.pageDetail .contentDetail {
+	float:right; width:50%; font-family: 'db_helvethaica_x55_regular'; font-size:18px;
+}
+.pageDetail .contentDetail article {
+	padding:40px 20px;
+}
+.pageDetail .contentDetail article .title {
+	font-size:24px; font-weight:bold; color:#000; margin-bottom:20px;
+}
+.pageDetail .contentDetail article .detail {
+	line-height:1.6em;  margin-bottom:20px;
+}
+.paragraphDetail {
+	padding-bottom:80px;
+}
+.pageDetail .galleryDetail {
+	float:left; width:50%;
+}
+.pageDetail .galleryDetail ul li {
+	position:relative;
+}
+.pageDetail .galleryDetail ul li a {
+	position:relative; display:block;
+}
+.pageDetail .galleryDetail ul li a img {
+	position:relative; left:0px; top:0px;
+}
+.pageDetail .galleryDetail ul li a .iconPlay {
+	position:absolute; top:50%; margin-top:-30px; left:50%; margin-left:-30px;
+	background-image:url(../images/playVDO.png);background-size:100%;
+	width:60px; height:60px;
+}
+/*====================================================================================================================*/
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+/* Styles */
+.paragraphDetail {
+	padding-bottom:40px;
+}
+}
+/*====================================================================================================================*/
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+/* Styles */
+.pageDetail .contentDetail {
+	float:none; width:auto; 
+}
+.paragraphDetail {
+	padding-bottom:20px;
+}
+.pageDetail .galleryDetail {
+	float:none; width:auto; padding-top:20px;
+}
+}
+/*====================================================================================================================*/
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+/* Styles */
+.pageDetail .contentDetail {
+	float:none; width:auto; 
+}
+.paragraphDetail {
+	padding-bottom:20px;
+}
+.pageDetail .galleryDetail {
+	float:none; width:auto; padding-top:20px;
+}
+}
+
+.boxControlVDO {
+	width:1200px; height:750px;
+}
+
+@media only screen and (min-width : 1024px) and (max-width : 1399px) {
+.boxControlVDO {
+	width:800px; height:500px;
+}	
+}
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+.boxControlVDO {
+	width:600px; height:375px;
+}		
+}
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+.boxControlVDO {
+	width:400px; height:250px;
+}		
+}
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+.boxControlVDO {
+	width:220px; height:138px;
+}		
+}
+
+.slideForMain {
+}
+.slideForMain .item {
+}
+.slideForMain .item img {
+	background-position:center 50%; background-size:cover; background-repeat:no-repeat;
+}

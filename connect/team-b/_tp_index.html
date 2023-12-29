@@ -1,0 +1,49 @@
+<div class="page-body">
+
+
+  <div style="display:inline-flex;height:100hv;">
+<!-- START BLOCK : DATA -->
+
+
+  <div class="card" style="width:300px;margin-right:5px;">
+    <div class="card-header">
+      <h3 class="card-title">{name}</h3>
+    </div>
+
+
+<div class="accordion" id="{name}">
+ 
+ 
+ <!-- START BLOCK : LISTDATA -->
+ <div class="accordion-item">
+  <h2 class="accordion-header" id="heading-{no}">
+    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{no}" aria-expanded="{st}">
+      {name2}
+    </button>
+  </h2>
+  <div id="collapse-{no}" class="accordion-collapse collapse {ac}" data-bs-parent="#{name}">
+    <div class="accordion-body pt-0">
+      {desc}
+    </div>
+  </div>
+</div>
+<!-- END BLOCK : LISTDATA -->
+
+</div>
+  </div>
+
+<!-- END BLOCK : DATA -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

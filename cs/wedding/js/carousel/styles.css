@@ -1,0 +1,38 @@
+
+.carousel {
+  height: 156px;
+  padding:0 0 0 2px;
+  width: 762px; 
+}
+.carousel#carousel-vertical {
+  height: 306px;
+  padding: 0;
+  width: auto;
+}
+.carousel#carousel-responsive {
+  width: auto; text-align:center;
+}
+.carousel li, 
+.carousel > div > div {
+  color: #fff;
+  padding:2px 0 2px 2px;
+  display:inline-block;
+}
+.carousel#carousel-vertical li, 
+.carousel#carousel-vertical > div > div {
+  padding:2px 2px 0 2px;
+}
+.carousel ul li:nth-child(even), 
+.carousel > div > div:nth-child(even) {
+  color:#666;
+}
+.carousel a {
+  display: block;
+  height: 200px;
+  line-height: 200px;
+  width: 200px;
+}
+.carousel a img {
+	background-position:center 50%; background-repeat:no-repeat; background-size:cover;
+}
+

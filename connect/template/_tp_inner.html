@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{page_title}- Play Digital Today</title>
+    <!-- CSS files -->
+    <link href="../dist/css/tabler.min.css" rel="stylesheet" />
+    <link href="../dist/css/tabler-flags.min.css" rel="stylesheet" />
+    <link href="../dist/css/tabler-payments.min.css" rel="stylesheet" />
+    <link href="../dist/css/tabler-vendors.min.css" rel="stylesheet" />
+    <link href="../dist/css/demo.min.css" rel="stylesheet" />
+</head>
+
+<body class="antialiased"  onload="startTime()">
+
+
+
+    <script>
+    function startTime() {
+    
+      const today = new Date();
+    
+      let monthNames = [
+            "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน",
+            "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม.",
+            "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+        ];
+      let year = today.getFullYear() + 543;
+      let month = monthNames[today.getMonth()];
+      let Day = today.getDate()
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  " วันที่ "+ Day +" เดือน "+ month +" พ.ศ." + year +"<br> เวลา " + h + ":" + m + ":" + s +"";
+      setTimeout(startTime, 1000);
+    }
+    
+    
+    
+    
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+
+
+
+    <div class="sticky-top">
+        <header class="navbar navbar-expand-md navbar-light d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href="../home/index.php">
+                        <img src="../static/logo.svg" width="150" height="35" alt="{logo_brand_alt}" class="navbar-brand-image">
+                    </a>
+                </h1>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item d-none d-md-flex me-3">
+
+                    </div>
+
+                    <!-- member dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+                            <span class="avatar avatar-sm" style="background-image: url('{avatar}')"></span>
+                            <div class="d-none d-xl-block ps-2">
+                                <div>{fullname}</div>
+                                <div class="mt-1 small text-muted">{title}</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <a href="../authentication/point-reward.php" class="dropdown-item">คะแนน-แลกของ</a>
+                            <a href="../authentication/profile.php" class="dropdown-item">ข้อมูลส่วนตัว</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../authentication/setting.php" class="dropdown-item">ตั้งค่า</a>
+                            <a href="../authentication/logout.php" class="dropdown-item">ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar-expand-md">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="navbar navbar-light">
+                    <div class="container-xl">
+                        <ul class="navbar-nav">
+
+
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.php">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+              </span>
+                                    <span class="nav-link-title">
+                Home
+              </span>
+                                </a>
+                            </li>
+
+
+
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../team-a/index.php">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-trello" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                                            <path d="M7 7h3v10h-3z"></path>
+                                            <path d="M14 7h3v6h-3z"></path>
+                                         </svg>
+              </span>
+                                    <span class="nav-link-title">
+                Trello Team A
+              </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../team-b/index.php">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-trello" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                                            <path d="M7 7h3v10h-3z"></path>
+                                            <path d="M14 7h3v6h-3z"></path>
+                                         </svg>
+              </span>
+                                    <span class="nav-link-title">
+                Trello Team B
+              </span>
+                                </a>
+                            </li>
+
+
+
+
+
+
+
+                          <!-- START BLOCK : ADMINMENU -->    
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/lifebuoy -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M15 15l3.35 3.35" /><path d="M9 15l-3.35 3.35" /><path d="M5.65 5.65l3.35 3.35" /><path d="M18.35 5.65l-3.35 3.35" /></svg>
+                              </span>
+                              <span class="nav-link-title">
+                                Admin Panel
+                              </span>
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="user.php">
+                                ข้อมูลพนักงานทั้งหมด
+                              </a>
+                              <a class="dropdown-item" href="board.php">
+                                ข้อมูลบอร์ดแยกตาม WorkSpace
+                              </a>
+                              
+                            </div>
+                          </li>
+                      <!-- END BLOCK : ADMINMENU -->
+
+
+
+                        </ul>
+                        <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                            <form action="{search}" method="get">
+                                <div class="input-icon">
+                                    <span class="input-icon-addon">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <circle cx="10" cy="10" r="7" />
+                  <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+              </span>
+                                    <input type="text" name="key" class="form-control" placeholder="Search…" aria-label="Search in website">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="wrapper">
+
+
+        <div class="page-wrapper">
+
+
+            <!-- INCLUDE BLOCK : body -->
+
+
+            <footer class="footer footer-transparent d-print-none">
+                <div class="container">
+                    <div class="row text-center align-items-center flex-row-reverse">
+                        <div class="col-lg-auto ms-lg-auto">
+                            <ul class="list-inline list-inline-dots mb-0">
+
+                                <li class="list-inline-item">
+                                    <a href="" target="_blank" class="link-secondary" rel="noopener">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                  </svg> {Powerby}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    Copyright &copy; {Copyright}.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Libs JS -->
+
+    <script language="javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <!-- Tabler Core -->
+    <script src="../dist/js/tabler.min.js"></script>
+</body>
+
+</html>
